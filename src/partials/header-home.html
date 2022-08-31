@@ -1,0 +1,78 @@
+<header>
+  <div class="header-home">
+    <div class="header__container-home">
+      <nav class="header__navigation">
+        <a href="./index.html" class="header__logo">
+          <svg width="24px" height="24px" aria-label="Logo">
+            <use href="/src/images/symbol-defs.svg#icon-logo"></use>
+          </svg>
+          <span class="header__logo-name">Filmoteka</span>
+        </a>
+        <!------------------------------ Themization --------------------------------->
+        <div class="container-navig">
+            <button class="btn-toggle toggle" id="btnToggle">
+            <svg class="toogle_sun" width="24" height="24">
+              <use href="/src/images/symbol-defs.svg#icon-sun"></use>
+            </svg>
+            <svg class="toogle_moon" width="24" height="24">
+              <use href="/src/images/symbol-defs.svg#icon-moon"></use>
+            </svg>
+          </button>
+          <div class="header__navigation-auth">
+              <div class="header__pages hidden_nav">
+                <a class="header__pages-link current_page" href="./index.html">HOME</a>
+                <a class="header__pages-link" href="./library.html">MY LIBRARY</button>
+              </div>
+          <div class="auth-wrapper">
+              <svg width="24px" height="24px" id="auth-icon" class="auth-icon hidden_nav">
+
+              <use href="/src/images/auth-icon/login-icon.svg#icon-user"></use>
+              </svg>
+              <form class="auth-form hide-form">
+              <label title="email">
+                <input
+                  type="email"
+                  name="userEmail"
+                  id="emailInput"
+                  placeholder="Email"
+                />
+              </label>
+              <label title="password">
+                <input
+                  type="password"
+                  name="userPassword"
+                  id="passwordInput"
+                  minlength="6"
+                  placeholder="Password"
+                />
+              </label>
+              <div class="header__buttons-auth">
+                <button type="submit" class="btn-enter" value="enter">Sign in</button>
+                <span class="header__decor" >/</span>
+                <button type="submit" class="btn-register" value="register">Sign Up</button>
+              </div>
+              </form>
+          </div>
+          </div>
+      </div>
+      </nav>
+      <form class="header__form">
+        <input
+          class="header__input"
+          type="text"
+          placeholder="Movie search"
+          autocomplete="off"
+          maxlength="32"
+        />
+        <button class="header__submit" type="submit">
+          <svg  class="header__icon-submit" width="18px" height="18px" aria-label="Search">
+            <use href="/src/images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="user-account is-hidden-account">
+      <button type="button" class="btn-signout hide-form" id="btn-signout">Sign out</button>
+      </div>
+    </div>
+  </div>
+</header>

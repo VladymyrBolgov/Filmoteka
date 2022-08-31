@@ -1,0 +1,183 @@
+
+.disable-scroll{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.list-developer{
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.developer-foto{
+    height: 214px;
+    width: 214px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.developer-name{
+    color: rgb(248, 93, 3);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.developer-work{
+    color: $black;
+    margin-top: 5px;
+}
+
+
+.modal-footer.open-footer{
+    opacity: 1;
+    visibility: visible;
+    transition: opcity 1s ease 0s;
+    
+}
+
+.box-list {
+    list-style: none;
+}
+
+.footer-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.developer-diskription{
+    display: flex;
+    justify-content: space-between;
+}
+
+.git-hub {
+    display: flex;
+    align-items: center;
+}
+
+.box-list:focus .footer-logo,
+.box-list:hover .footer-logo {
+    scale: 1.5;
+}
+
+
+
+.modal-close-btn{
+    border-radius: 50%;
+    display: flex;
+}
+
+.modal-close-btn{
+    cursor: pointer;
+    position: absolute;
+        top: -6px;
+        right: -6px;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.close-icon{
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 48px;
+}
+
+.backdrop-footer.open-footer{
+    z-index: 9;
+    position: fixed;
+    background-color: darkgray;
+    top: -30;
+    left: 0;
+    width: 110vw;
+    height: 112vh;
+    transition: opcity 1s ease 0s;
+    opacity: 1;
+        border-radius: 22px;
+}
+
+    .modal-footer{
+        z-index: 10;
+    background-color: $white;
+    border-radius: 2px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    top: calc(50% - 45vh);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opcity 1s ease 0s;
+}
+@media screen and (min-width: 1280px){
+    .developer-foto{
+            width: 202px;
+            height: 188px;
+        }
+
+        .modal-footer{
+            top: calc(50% - 30vh);
+        }
+}
+@media screen and (min-width: 769px) and (max-width: 1279px){
+    .modal-footer{
+        width: 770px;
+    }
+
+        .developer-foto {
+            width: 202px;
+            height: 120px;
+        }
+    
+
+}
+@media screen and (max-width: 768px){
+    .developer-foto{
+        display: none;
+    }
+
+    .list-developer{
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 80vh;
+        gap: 0px;
+        font-size: 15px;
+            line-height: 9px;
+            margin: 0;
+    }
+
+    .modal-footer{
+        height: 90vh;
+        width: 320px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+        justify-content: normal;
+        align-items: normal;
+        flex-direction: column
+        
+    }
+
+}
+
+body.dark-theme .modal-footer{
+    background-color: #1b1b1d;
+}
+
+body.dark-theme .developer-work{
+    color: $white;
+}
+
+body.dark-theme .developer-name {
+ color: rgb(168, 67, 0);
+}
+
+body.dark-theme .modal-close-btn {
+    fill: white;
+}
